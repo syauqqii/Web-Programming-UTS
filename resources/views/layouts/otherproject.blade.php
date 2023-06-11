@@ -38,7 +38,7 @@
                 <td>{{ $item->link }}</td>
                 <td>
                   <a href="{{ url('edit-otherproject/'.$item->id) }}" type="button" class="btn btn-info">Edit</a>
-                  <a href="{{ url('delete-otherproject/'.$item->id) }}" type="button" class="btn btn-danger">Delete</a>
+                  <a href="{{ url('delete-otherproject/'.$item->id) }}" type="button" class="btn btn-danger" onclick="confirmDelete(event)">Delete</a>
                 </td>
               </tr>
               @endforeach
@@ -54,5 +54,15 @@
     </section>
     <!-- /.content -->
   </div>
+  <script>
+  function confirmDelete(event) {
+    event.preventDefault(); // Menghentikan tindakan default (pemrosesan URL)
+
+    if (confirm('Apakah Anda yakin ingin menghapus data ini?')) {
+      // Jika pengguna mengklik "OK" pada konfirmasi, lanjutkan ke URL delete
+      window.location.href = event.target.href;
+    }
+  }
+  </script>
   <!-- /.content-wrapper -->
 @include('layouts.footer')

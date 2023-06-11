@@ -10,7 +10,7 @@ class skill_framework extends Model
     use HasFactory;
 
     protected $table = "skill_frameworks";
-    protected $primatyKey = "id";
+    protected $primaryKey = "id";
     protected $fillable = [
         'id', 'skill_frameworks'
     ];

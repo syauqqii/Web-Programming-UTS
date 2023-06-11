@@ -10,7 +10,7 @@ class aboutme extends Model
     use HasFactory;
 
     protected $table = "aboutmes";
-    protected $primatyKey = "id";
+    protected $primaryKey = "id";
     protected $fillable = [
         'id', 'konten', 'link'
     ];

@@ -10,7 +10,7 @@ class skill_tools extends Model
     use HasFactory;
 
     protected $table = "skill_tools";
-    protected $primatyKey = "id";
+    protected $primaryKey = "id";
     protected $fillable = [
         'id', 'skill_tools'
     ];

@@ -20,66 +20,26 @@
       <div class="container-fluid">
         <!-- Small boxes (Stat box) -->
         <div class="row">
-          <h1 class="m-0">FRAMEWORK</h1>
-          <a href="{{ asset('create-framework') }}" type="button" class="btn btn-success">Tambah Data</a>
+          <h1 class="m-0">SKILL</h1>
+          <a href="{{ asset('create-skill') }}" type="button" class="btn btn-success">Tambah Data</a>
           <table class="table table-bordered">
             <thead>
               <tr>
-                <th scope="col" style="width: 90%">Framework</th>
+                <th scope="col" style="width: 4%">Nomor</th>
+                <th scope="col" style="width: 43%">Skill</th>
+                <th scope="col" style="width: 43%">Kategori</th>
                 <th scope="col" style="width: 10%">AKSI</th>
               </tr>
             </thead>
             <tbody>
-              @foreach ($dataFramework as $item)
+              @foreach ($dataSkill as $index => $item)
               <tr>
-                <td scope="row">{{ $item->skill_frameworks }}</td>
+                <td scope="row">{{ $index + 1 }}</td>
+                <td scope="row">{{ $item->name }}</td>
+                <td scope="row">{{ $item->category->name }}</td>
                 <td>
-                  <a href="{{ url('edit-framework/'.$item->id) }}" type="button" class="btn btn-info">Edit</a>
-                  <a href="{{ url('delete-framework/'.$item->id) }}" type="button" class="btn btn-danger">Delete</a>
-                </td>
-              </tr>
-              @endforeach
-            </tbody>
-          </table>
-          <br>
-          <h1 class="m-0">LANGUAGE</h1>
-          <a href="{{ asset('create-language') }}" type="button" class="btn btn-success">Tambah Data</a>
-          <table class="table table-bordered">
-            <thead>
-              <tr>
-                <th scope="col" style="width: 90%">Language</th>
-                <th scope="col" style="width: 10%">AKSI</th>
-              </tr>
-            </thead>
-            <tbody>
-              @foreach ($dataLanguage as $item)
-              <tr>
-                <td scope="row">{{ $item->skill_languages }}</td>
-                <td>
-                  <a href="{{ url('edit-language/'.$item->id) }}" type="button" class="btn btn-info">Edit</a>
-                  <a href="{{ url('delete-language/'.$item->id) }}" type="button" class="btn btn-danger">Delete</a>
-                </td>
-              </tr>
-              @endforeach
-            </tbody>
-          </table>
-          <br>
-          <h1 class="m-0">TOOLS</h1>
-          <a href="{{ asset('create-tool') }}" type="button" class="btn btn-success">Tambah Data</a>
-          <table class="table table-bordered">
-            <thead>
-              <tr>
-                <th scope="col" style="width: 90%">Tools</th>
-                <th scope="col" style="width: 10%">AKSI</th>
-              </tr>
-            </thead>
-            <tbody>
-              @foreach ($dataTools as $item)
-              <tr>
-                <td scope="row">{{ $item->skill_tools }}</td>
-                <td>
-                  <a href="{{ url('edit-tool/'.$item->id) }}" type="button" class="btn btn-info">Edit</a>
-                  <a href="{{ url('delete-tool/'.$item->id) }}" type="button" class="btn btn-danger">Delete</a>
+                  <a href="{{ url('edit-skill/'.$item->id) }}" type="button" class="btn btn-info">Edit</a>
+                  <a href="{{ url('delete-skill/'.$item->id) }}" type="button" class="btn btn-danger" onclick="confirmDelete(event)">Delete</a>
                 </td>
               </tr>
               @endforeach
@@ -95,5 +55,15 @@
     </section>
     <!-- /.content -->
   </div>
+  <script>
+  function confirmDelete(event) {
+    event.preventDefault(); // Menghentikan tindakan default (pemrosesan URL)
+
+    if (confirm('Apakah Anda yakin ingin menghapus data ini?')) {
+      // Jika pengguna mengklik "OK" pada konfirmasi, lanjutkan ke URL delete
+      window.location.href = event.target.href;
+    }
+  }
+  </script>
   <!-- /.content-wrapper -->
 @include('layouts.footer')

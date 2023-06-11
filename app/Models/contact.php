@@ -10,7 +10,7 @@ class contact extends Model
     use HasFactory;
 
     protected $table = "contacts";
-    protected $primatyKey = "id";
+    protected $primaryKey = "id";
     protected $fillable = [
         'id', 'email', 'instagram', 'facebook', 'github'
     ];

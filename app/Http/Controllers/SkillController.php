@@ -3,9 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\skill_framework;
-use App\Models\skill_language;
-use App\Models\skill_tools;
+use App\Models\Skill;
+use App\Models\Category;
 
 class SkillController extends Controller
 {
@@ -14,55 +13,26 @@ class SkillController extends Controller
      */
     public function index()
     {
-        $dataFramework = Skill_framework::all();
-        $dataLanguage = Skill_language::all();
-        $dataTools = Skill_tools::all();
-        return view('layouts.skill', compact('dataFramework', 'dataLanguage', 'dataTools'));
+        $dataSkill = Skill::all();
+        return view('layouts.skill', compact('dataSkill'));
     }
 
     /**
      * Show the form for creating a new resource.
      */
-    public function createFramework()
-    {
-        return view('layouts.create-framework');
-    }
-
-    public function createLanguage()
-    {
-        return view('layouts.create-language');
-    }
-
-    public function createTool()
-    {
-        return view('layouts.create-tool');
+    public function createSkill(){
+        $categories = Category::all();
+        return view('layouts.create-skill', compact('categories'));
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function storeFramework(Request $request)
+    public function storeSkill(Request $request)
     {
-         Skill_framework::create([
-            'skill_frameworks' => $request->skill_frameworks,
-        ]);
-
-        return redirect('skill');
-    }
-
-    public function storeLanguage(Request $request)
-    {
-         Skill_language::create([
-            'skill_languages' => $request->skill_languages,
-        ]);
-
-        return redirect('skill');
-    }
-
-    public function storeTool(Request $request)
-    {
-         Skill_tools::create([
-            'skill_tools' => $request->skill_tools,
+         Skill::create([
+            'name' => $request->name,
+            'category_id' => $request->category,
         ]);
 
         return redirect('skill');
@@ -79,73 +49,31 @@ class SkillController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function editFramework(string $id)
+    public function editSkill(string $id)
     {
-        $ids = Skill_framework::findorfail($id);
-        return view('layouts.edit-framework', compact('ids'));
-    }
-
-    public function editLanguage(string $id)
-    {
-        $ids = Skill_language::findorfail($id);
-        return view('layouts.edit-language', compact('ids'));
-    }
-
-    public function editTool(string $id)
-    {
-        $ids = Skill_tools::findorfail($id);
-        return view('layouts.edit-tool', compact('ids'));
+        $ids = Skill::findorfail($id);
+        $categories = Category::all();
+        return view('layouts.edit-skill', compact('ids', 'categories'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function updateFramework(Request $request, string $id)
+    public function updateSkill(Request $request, string $id)
     {
-        $ids = Skill_framework::findorfail($id);
+        $ids = Skill::findorfail($id);
         $ids->update($request->all());
 
         return redirect('skill');
     }
 
-    public function updateLanguage(Request $request, string $id)
-    {
-        $ids = Skill_language::findorfail($id);
-        $ids->update($request->all());
-
-        return redirect('skill');
-    }
-
-    public function updateTool(Request $request, string $id)
-    {
-        $ids = Skill_tools::findorfail($id);
-        $ids->update($request->all());
-
-        return redirect('skill');
-    }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroyFramework(string $id)
+    public function destroySkill(string $id)
     {
-        $ids = Skill_framework::findorfail($id);
-        $ids->delete();
-
-        return back();
-    }
-
-    public function destroyLanguage(string $id)
-    {
-        $ids = Skill_language::findorfail($id);
-        $ids->delete();
-
-        return back();
-    }
-
-    public function destroyTool(string $id)
-    {
-        $ids = Skill_tools::findorfail($id);
+        $ids = Skill::findorfail($id);
         $ids->delete();
 
         return back();

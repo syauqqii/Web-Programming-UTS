@@ -52,7 +52,7 @@
 							<ul class="list">
 								<li class="item">Back End Developer.</li>
 								<li class="item">Junior Programmer.</li>
-								<li class="item">Newbie Gamer.</li>
+								<li class="item">Deadliner.</li>
 							</ul>
 						</div>
 					</div>
@@ -100,40 +100,19 @@
 			<div class="section_title">skills</div>
 			<div class="section_content">
 				<div class="skillz">
-					<div class="skillz_category">
-						<div class="skillz_category_label">
-							Languages
-						</div>
-						<ul>
-							@foreach ($dataFramework as $item)
-							<li class="skillz_category_item">{{ $item->skill_frameworks }}</li>
-							@endforeach
-						</ul>
-					</div>
-
-					<div class="skillz_category">
-						<div class="skillz_category_label">
-							frameworks
-						</div>
-						<ul>
-							@foreach ($dataLanguage as $item)
-							<li class="skillz_category_item">{{ $item->skill_languages }}</li>
-							@endforeach
-						</ul>
-					</div>
-
-					<div class="skillz_category">
-						<div class="skillz_category_label">
-							Tools
-						</div>
-						<ul>
-							@foreach ($dataTools as $item)
-							<li class="skillz_category_item">{{ $item->skill_tools }}</li>
-							@endforeach
-						</ul>
-					</div>
+					@foreach ($dataCategories as $category)
+					    <div class="skillz_category">
+					        <div class="skillz_category_label">
+					            {{ $category->name }}
+					        </div>
+					        <ul>
+					            @foreach ($category->skills as $skill)
+					                <li class="skillz_category_item">{{ $skill->name }}</li>
+					            @endforeach
+					        </ul>
+					    </div>
+					@endforeach
 		</section>
-
 		<!-- Recent Project -->
 		<section class="section featured-projects" id="project">
 			<div class="section_title">Recent Projects</div>

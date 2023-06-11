@@ -10,7 +10,7 @@ class homepage extends Model
     use HasFactory;
 
     protected $table = "homepages";
-    protected $primatyKey = "id";
+    protected $primaryKey = "id";
     protected $fillable = [
         'id', 'nama', 'konten', 'email'
     ];
