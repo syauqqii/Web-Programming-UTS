@@ -32,3 +32,4 @@ php artisan key:generate
 ```
 php artisan serve
 ```
+Download [POSTMAN](https://www.postman.com/downloads/) lalu import file [API POSTMAN](https://github.com/syauqqii/Web-Programming-UTS/blob/main/WEB-PORTOFOLIO.postman_collection.json) ke dalam [POSTMAN](https://www.postman.com/downloads/)
