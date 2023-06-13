@@ -30,6 +30,12 @@ buka file .env sesuaikan nama databasenya dengan nama database yang telah di imp
 php artisan key:generate
 ```
 ```
+php artisan jwt:secret
+```
+```
 php artisan serve
 ```
 Download [POSTMAN](https://www.postman.com/downloads/) lalu import file [API POSTMAN](https://github.com/syauqqii/Web-Programming-UTS/blob/main/WEB-PORTOFOLIO.postman_collection.json) ke dalam [POSTMAN](https://www.postman.com/downloads/)
+```
+SEKARANG ANDA DAPAT CRUD MELALUI WEBSITE ATAUPUN MELALUI API (POSTMAN)
+```
