@@ -73,5 +73,11 @@ composer install
 npm i vite
 ```
 ```
-npm run dev
+php artisan key:generate
+```
+```
+npm run build
+```
+```
+php artisan serve
 ```
