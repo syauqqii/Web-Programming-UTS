@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\AuthMiddleware;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,14 +17,11 @@ use App\Http\Middleware\AuthMiddleware;
 
 Route::get('/', [App\Http\Controllers\IndexController::class, 'index']);
 
-// Route::middleware(['auth'])->group(function () {
-//     Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('layouts.master');
-// });
-
 Auth::routes();
-Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
+Route::get('/dashboard', [HomeController::class, 'index'])->name('dashboard');
+
 Route::get('/logout', function(){
-    \Auth::logout();
+    Auth::logout();
     return redirect('/login');
 });
 
