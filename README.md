@@ -68,6 +68,12 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 ## Instalasi
 Download dan Import [DATABASE](https://github.com/syauqqii/Web-Programming-UTS/blob/main/laravel_portofolio.sql) ke MYSQL Database
 ```
+$ git clone https://github.com/syauqqii/Web-Programming-UTS web
+```
+```
+$ cd web
+```
+```
 $ composer install
 ```
 ```
@@ -76,6 +82,8 @@ $ npm i vite
 ```
 $ npm run build
 ```
+Setting file .env,
+buka file .env sesuaikan nama databasenya dengan nama database yang telah di import
 ```
 $ php artisan key:generate
 ```
