@@ -10,25 +10,25 @@
 ## Instalasi
 Download dan Import [DATABASE](https://github.com/syauqqii/Web-Programming-UTS/blob/main/laravel_portofolio.sql) ke MYSQL Database
 ```
-$ git clone https://github.com/syauqqii/Web-Programming-UTS web
+git clone https://github.com/syauqqii/Web-Programming-UTS web
 ```
 ```
-$ cd web
+cd web
 ```
 ```
-$ composer install
+composer install
 ```
 ```
-$ npm i vite
+npm i vite
 ```
 ```
-$ npm run build
+npm run build
 ```
 Setting file .env,
 buka file .env sesuaikan nama databasenya dengan nama database yang telah di import
 ```
-$ php artisan key:generate
+php artisan key:generate
 ```
 ```
-$ php artisan serve
+php artisan serve
 ```
