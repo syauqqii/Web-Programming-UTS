@@ -66,19 +66,19 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
 ## Instalasi
-Download dan Import [DATABASE](https://github.com/syauqqii/Web-Programming-UTS/blob/main/laravel_portofolio.sql)
+Download dan Import [DATABASE](https://github.com/syauqqii/Web-Programming-UTS/blob/main/laravel_portofolio.sql) ke MYSQL Database
 ```
-composer install
-```
-```
-npm i vite
+$ composer install
 ```
 ```
-php artisan key:generate
+$ npm i vite
 ```
 ```
-npm run build
+$ npm run build
 ```
 ```
-php artisan serve
+$ php artisan key:generate
+```
+```
+$ php artisan serve
 ```
