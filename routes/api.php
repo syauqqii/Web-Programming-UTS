@@ -11,10 +11,6 @@ use App\Http\Controllers\Api\OtherController;
 use App\Http\Controllers\Api\SkillController;
 use App\Http\Controllers\Api\RecentController;
 
-// Route::middleware('auth:api')->get('/user', function (Request $request) {
-//     return $request->user();
-// });
-
 Route::post('/login', LoginController::class)->name('login');
 
 Route::group(['middleware' => ['auth:api']], function () {
