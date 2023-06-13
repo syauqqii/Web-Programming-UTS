@@ -20,7 +20,7 @@
       <div class="container-fluid">
         <!-- Small boxes (Stat box) -->
         <div class="row">
-          <table class="table">
+          <table class="table table-bordered">
             <thead>
               <tr>
                 <th scope="col" style="width: 20%;">JUDUL</th>
