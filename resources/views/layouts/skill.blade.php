@@ -20,7 +20,6 @@
       <div class="container-fluid">
         <!-- Small boxes (Stat box) -->
         <div class="row">
-          <h1 class="m-0">SKILL</h1>
           <a href="{{ asset('create-skill') }}" type="button" class="btn btn-success">Tambah Data</a>
           <table class="table table-bordered">
             <thead>
