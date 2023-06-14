@@ -374,7 +374,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(2, 'Dimas Syauqi Syafa', '0xd1m5@gmail.com', NULL, '$2y$10$C/16piVvrF2vdYIToOh7re09g0VhHUIi08ET1h74m82vZJrj0Q4Bq', NULL, '2023-05-01 15:00:01', '2023-05-01 15:00:01');
+(2, 'Dimas Syauqi Syafa', 'admin@ytta.id', NULL, '$2y$10$C/16piVvrF2vdYIToOh7re09g0VhHUIi08ET1h74m82vZJrj0Q4Bq', NULL, '2023-03-01 15:00:00', '2023-03-01 15:00:00');
 
 --
 -- Indexes for dumped tables
