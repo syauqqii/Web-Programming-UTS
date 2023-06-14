@@ -23,8 +23,8 @@ npm i vite
 ```
 npm run build
 ```
-Setting file .env,
-buka file .env sesuaikan nama databasenya dengan nama database yang telah di import
+### Setting file .env,
+### buka file .env sesuaikan nama databasenya dengan nama database yang telah di import
 ```
 php artisan key:generate
 ```
