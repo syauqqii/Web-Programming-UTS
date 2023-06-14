@@ -1,3 +1,11 @@
+## Informasi
+```
+LOGIN CREDENTIALS
+
+EMAIL : admin@ytta.id
+PASS  : Dimas007
+```
+
 ## Instalasi
 Download dan Import [DATABASE](https://github.com/syauqqii/Web-Programming-UTS/blob/main/laravel_portofolio.sql) ke MYSQL Database
 ```
