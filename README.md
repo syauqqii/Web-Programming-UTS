@@ -34,7 +34,7 @@ php artisan jwt:secret
 ```
 php artisan serve
 ```
-### Buka [POSTMAN](https://www.postman.com/downloads/) lalu import [FILE INI](https://github.com/syauqqii/Web-Programming-UTS/blob/main/WEB-PORTOFOLIO.postman_collection.json) ke dalam [POSTMAN](https://www.postman.com/downloads/)
+### Buka [POSTMAN](https://www.postman.com/downloads/) lalu import [FILE INI](https://github.com/syauqqii/Web-Programming-UTS/blob/main/WEB-PORTOFOLIO.postman_collection.json) ke dalam POSTMAN
 ```
 SEKARANG ANDA DAPAT CRUD MELALUI WEBSITE ATAUPUN MELALUI API (via POSTMAN / cURL)
 ```
