@@ -19,9 +19,9 @@ composer install
 ```bash
 npm i vite
 ```
-```bash
+<!--```bash
 npm run build
-```
+```-->
 ### Setting file .env,
 > buka file `.env` sesuaikan nama databasenya dengan nama database yang telah di import
 ```bash
