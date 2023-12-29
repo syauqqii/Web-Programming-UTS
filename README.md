@@ -1,12 +1,12 @@
-## Informasi
+## **Informasi**
 > LOGIN CREDENTIALS
 ```bash
 EMAIL : admin@ytta.id
 PASS  : Dimas007
 ```
 
-## Instalasi
-### Download dan Import [DATABASE](https://github.com/syauqqii/Web-Programming-UTS/blob/main/laravel_portofolio.sql) ke MYSQL Database
+## **Instalasi**
+### Download dan Import [DATABASE](https://github.com/syauqqii/Web-Programming-UTS/blob/main/laravel_portofolio.sql) ke MYSQL Database milik kalian.
 ```bash
 git clone https://github.com/syauqqii/Web-Programming-UTS web
 ```
@@ -23,7 +23,7 @@ npm i vite
 npm run build
 ```
 ### Setting file .env,
-buka file .env sesuaikan nama databasenya dengan nama database yang telah di import
+> buka file `.env` sesuaikan nama databasenya dengan nama database yang telah di import
 ```bash
 php artisan key:generate
 ```
@@ -33,7 +33,7 @@ php artisan jwt:secret
 ```bash
 php artisan serve
 ```
-### Buka [POSTMAN](https://www.postman.com/downloads/) lalu import [FILE INI](https://github.com/syauqqii/Web-Programming-UTS/blob/main/WEB-PORTOFOLIO.postman_collection.json) ke dalam POSTMAN
+### Buka [PostMan](https://www.postman.com/downloads/) lalu import [Json Format](https://github.com/syauqqii/Web-Programming-UTS/blob/main/WEB-PORTOFOLIO.postman_collection.json) ke dalam PostMan.
 ```
-SEKARANG ANDA DAPAT CRUD MELALUI WEBSITE ATAUPUN MELALUI API (via POSTMAN / cURL)
+Sekarang anda dapat melakukan CRUD melalui Website secara langsung ataupun melalui API.
 ```
