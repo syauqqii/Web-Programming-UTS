@@ -6,7 +6,7 @@ PASS  : Dimas007
 ```
 
 ## **Instalasi**
-### Download dan Import [Data ini](https://github.com/syauqqii/Web-Programming-UTS/blob/main/laravel_portofolio.sql) ke MYSQL Database milik kalian.
+> Download dan Import [Data ini](https://github.com/syauqqii/Web-Programming-UTS/blob/main/laravel_portofolio.sql) ke MYSQL Database milik kalian.
 ```bash
 git clone https://github.com/syauqqii/Web-Programming-UTS web
 ```
